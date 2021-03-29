@@ -1,8 +1,5 @@
-package tum.demo.entites;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+package tum.demo.Entities;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,18 +10,27 @@ public class RasaEvent implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
+    @OneToOne (cascade = {CascadeType.ALL})
+    private Data data;
     private String sender_id;
     private double timestamp;
     private String event;
     private String text;
-    private transient Data data;
     private String name;
     private String policy;
     private double confidence;
     private transient Metadata metadata;
+    private String utter_action;
     private String action_text;
     private transient Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    public String getUtter_action() {
+        return utter_action;
+    }
+
+    public void setUtter_action(String utter_action) {
+        this.utter_action = utter_action;
+    }
 
     //Default Constructor
     public RasaEvent() {
@@ -156,4 +162,6 @@ public class RasaEvent implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+
 }

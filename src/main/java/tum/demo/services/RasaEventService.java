@@ -2,7 +2,7 @@ package tum.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tum.demo.entites.RasaEvent;
+import tum.demo.Entities.RasaEvent;
 import tum.demo.repositories.RasaEventRepository;
 
 @Service

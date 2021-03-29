@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import tum.demo.services.RasaEventService;
 
 @Controller
-public class KafkaController {
+public class RasaEventController {
 
     @Autowired
     private RasaEventService rasaEventService;

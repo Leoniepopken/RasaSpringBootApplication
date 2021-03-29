@@ -9,7 +9,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import tum.demo.entites.RasaEvent;
+import tum.demo.Entities.RasaEvent;
 
 import java.util.HashMap;
 import java.util.Map;

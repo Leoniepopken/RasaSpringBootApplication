@@ -1,11 +1,18 @@
-package tum.demo.entites;
+package tum.demo.Entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.HashMap;
 import java.util.Map;
 
-
+@Entity
 public class Metadata {
 
+    @Id
+    @GeneratedValue
+    private Long id;
     private String utter_action;
     private transient Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -41,4 +48,11 @@ public class Metadata {
         this.additionalProperties = additionalProperties;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
